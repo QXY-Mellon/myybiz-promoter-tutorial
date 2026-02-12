@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Become a Promoter - QXYMellon</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#4F46E5',
+            primaryDark: '#3730A3',
+            primaryLight: '#818CF8',
+            accent: '#7C3AED',
+            accentLight: '#A78BFA',
+            surface: '#F8FAFC',
+            surfaceCard: '#FFFFFF',
+            textPrimary: '#0F172A',
+            textSecondary: '#475569',
+            textMuted: '#64748B',
+            border: '#E2E8F0',
+            success: '#10B981',
+            highlight: '#FEF3C7',
+            highlightBorder: '#F59E0B',
+          },
+          fontFamily: {
+            heading: ['Poppins', 'sans-serif'],
+            body: ['Open Sans', 'sans-serif'],
+          },
+          screens: {
+            'xs': '400px',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: #F1F5F9;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    .gradient-hero {
+      background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #A78BFA 100%);
+    }
+
+    .step-card {
+      transition: box-shadow 0.3s ease;
+    }
+
+    @media (hover: hover) {
+      .step-card:hover {
+        box-shadow: 0 20px 60px rgba(79, 70, 229, 0.15);
+      }
+    }
+
+    .step-number {
+      background: linear-gradient(135deg, #4F46E5, #7C3AED);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .screenshot-wrapper {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #E2E8F0;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    }
+
+    @media (min-width: 640px) {
+      .screenshot-wrapper { border-radius: 12px; }
+    }
+
+    .screenshot-wrapper img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    /* Highlight badges — responsive */
+    .highlight-badge {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 8px;
+      background: rgba(245, 158, 11, 0.95);
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 0.625rem;
+      line-height: 1.2;
+      border-radius: 14px;
+      box-shadow: 0 2px 8px rgba(245, 158, 11, 0.4);
+      pointer-events: none;
+      max-width: 70%;
+      z-index: 10;
+    }
+
+    .highlight-badge::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: #fff;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    @media (min-width: 400px) {
+      .highlight-badge {
+        padding: 5px 10px;
+        font-size: 0.6875rem;
+        gap: 5px;
+        max-width: 60%;
+      }
+      .highlight-badge::before {
+        width: 7px;
+        height: 7px;
+      }
+    }
+
+    @media (min-width: 640px) {
+      .highlight-badge {
+        padding: 6px 14px;
+        font-size: 0.75rem;
+        gap: 6px;
+        border-radius: 20px;
+        box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+        max-width: 50%;
+      }
+      .highlight-badge::before {
+        width: 8px;
+        height: 8px;
+      }
+    }
+
+    /* === Per-badge responsive positioning === */
+
+    /* Step 1: "Click here to Register" — points to top-right Login/Register */
+    .badge-step1 {
+      top: 12%;
+      right: 2%;
+    }
+    @media (min-width: 400px) {
+      .badge-step1 { top: 16%; right: 1%; }
+    }
+    @media (min-width: 640px) {
+      .badge-step1 { top: 20%; right: 1%; }
+    }
+
+    /* Step 2: "Fill in your details" — points to center form area */
+    .badge-step2 {
+      top: 18%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @media (min-width: 400px) {
+      .badge-step2 { top: 22%; }
+    }
+    @media (min-width: 640px) {
+      .badge-step2 { top: 28%; }
+    }
+
+    /* Step 3: "Apply to Become a Promoter" — points to top-left button */
+    .badge-step3 {
+      top: 6%;
+      left: 10%;
+    }
+    @media (min-width: 400px) {
+      .badge-step3 { top: 8%; left: 16%; }
+    }
+    @media (min-width: 640px) {
+      .badge-step3 { top: 10%; left: 20%; }
+    }
+
+    /* Step 4: "Check the box & Confirm" — points to bottom-right button */
+    .badge-step4 {
+      bottom: 8%;
+      right: 16%;
+    }
+    @media (min-width: 400px) {
+      .badge-step4 { bottom: 10%; right: 24%; }
+    }
+    @media (min-width: 640px) {
+      .badge-step4 { bottom: 13%; right: 32%; }
+    }
+
+    /* Connector chevrons in overview pills — hide on tiny screens */
+    .pill-chevron {
+      display: none;
+    }
+
+    @media (min-width: 400px) {
+      .pill-chevron { display: flex; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .animate-in {
+      animation: fadeInUp 0.6s ease forwards;
+      opacity: 0;
+    }
+
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+    .delay-3 { animation-delay: 0.3s; }
+    .delay-4 { animation-delay: 0.4s; }
+  </style>
+</head>
+<body class="min-h-screen">
+
+  <!-- Hero Section -->
+  <header class="gradient-hero relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-10 sm:top-20 left-4 sm:left-10 w-48 sm:w-72 h-48 sm:h-72 bg-white rounded-full blur-3xl"></div>
+      <div class="absolute bottom-4 sm:bottom-10 right-8 sm:right-20 w-64 sm:w-96 h-64 sm:h-96 bg-white rounded-full blur-3xl"></div>
+    </div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24 text-center">
+      <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/20 rounded-full px-4 sm:px-5 py-1.5 sm:py-2 mb-6 sm:mb-8">
+        <svg class="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+        </svg>
+        <span class="text-white font-heading font-medium text-xs sm:text-sm">Step-by-Step Guide</span>
+      </div>
+      <h1 class="font-heading font-extrabold text-2xl xs:text-3xl sm:text-4xl lg:text-5xl text-white leading-tight mb-4 sm:mb-5">
+        How to Become a Promoter
+      </h1>
+      <p class="text-white/85 text-sm sm:text-base lg:text-lg max-w-2xl mx-auto leading-relaxed font-body px-2">
+        Follow these 4 simple steps to register and become a promoter on QXYMellon. Start earning commissions by sharing products you love.
+      </p>
+      <div class="mt-8 sm:mt-10 flex justify-center">
+        <a href="#steps" class="inline-flex items-center gap-2 bg-white text-primary font-heading font-semibold px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl hover:bg-white/90 transition-colors duration-200 cursor-pointer text-sm">
+          Get Started
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Steps Section -->
+  <main id="steps" class="max-w-4xl mx-auto px-3 xs:px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-20">
+
+    <!-- Overview Pills -->
+    <div class="flex flex-wrap justify-center gap-2 xs:gap-3 mb-8 sm:mb-14 animate-in delay-1">
+      <div class="flex items-center gap-2 bg-white rounded-full px-3 xs:px-4 py-1.5 xs:py-2 shadow-sm border border-border">
+        <div class="w-6 h-6 xs:w-7 xs:h-7 rounded-lg bg-primary/10 flex items-center justify-center">
+          <span class="text-primary font-heading font-bold text-xs">1</span>
+        </div>
+        <span class="text-textSecondary text-xs xs:text-sm font-medium">Visit Store</span>
+      </div>
+      <div class="pill-chevron items-center gap-1 text-textMuted">
+        <svg class="w-3.5 h-3.5 xs:w-4 xs:h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+        </svg>
+      </div>
+      <div class="flex items-center gap-2 bg-white rounded-full px-3 xs:px-4 py-1.5 xs:py-2 shadow-sm border border-border">
+        <div class="w-6 h-6 xs:w-7 xs:h-7 rounded-lg bg-primary/10 flex items-center justify-center">
+          <span class="text-primary font-heading font-bold text-xs">2</span>
+        </div>
+        <span class="text-textSecondary text-xs xs:text-sm font-medium">Register</span>
+      </div>
+      <div class="pill-chevron items-center gap-1 text-textMuted">
+        <svg class="w-3.5 h-3.5 xs:w-4 xs:h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+        </svg>
+      </div>
+      <div class="flex items-center gap-2 bg-white rounded-full px-3 xs:px-4 py-1.5 xs:py-2 shadow-sm border border-border">
+        <div class="w-6 h-6 xs:w-7 xs:h-7 rounded-lg bg-primary/10 flex items-center justify-center">
+          <span class="text-primary font-heading font-bold text-xs">3</span>
+        </div>
+        <span class="text-textSecondary text-xs xs:text-sm font-medium">Apply</span>
+      </div>
+      <div class="pill-chevron items-center gap-1 text-textMuted">
+        <svg class="w-3.5 h-3.5 xs:w-4 xs:h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+        </svg>
+      </div>
+      <div class="flex items-center gap-2 bg-white rounded-full px-3 xs:px-4 py-1.5 xs:py-2 shadow-sm border border-border">
+        <div class="w-6 h-6 xs:w-7 xs:h-7 rounded-lg bg-primary/10 flex items-center justify-center">
+          <span class="text-primary font-heading font-bold text-xs">4</span>
+        </div>
+        <span class="text-textSecondary text-xs xs:text-sm font-medium">Confirm</span>
+      </div>
+    </div>
+
+    <!-- Step 1 -->
+    <section class="step-card bg-surfaceCard rounded-xl sm:rounded-2xl shadow-sm border border-border p-4 xs:p-5 sm:p-8 mb-5 sm:mb-8 animate-in delay-1">
+      <div class="flex items-start gap-3 sm:gap-4 mb-4 sm:mb-6">
+        <div class="step-number w-10 h-10 xs:w-12 xs:h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl text-base sm:text-xl">1</div>
+        <div class="min-w-0 flex-1">
+          <h2 class="font-heading font-bold text-lg xs:text-xl sm:text-2xl text-textPrimary mb-2">Visit the Store & Click Register</h2>
+          <a href="https://www.myybiz.cc/QXYmellon-Lens" target="_blank" rel="noopener noreferrer"
+             class="group flex items-center gap-2 xs:gap-2.5 bg-primary/5 hover:bg-primary/10 border border-primary/20 hover:border-primary/40 rounded-lg sm:rounded-xl px-3 sm:px-4 py-2 sm:py-2.5 mb-3 transition-all duration-200 cursor-pointer">
+            <span class="flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-primary/10 group-hover:bg-primary/15 transition-colors duration-200 flex-shrink-0">
+              <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+              </svg>
+            </span>
+            <span class="flex flex-col min-w-0 flex-1">
+              <span class="text-[10px] sm:text-xs font-heading font-semibold text-primary tracking-wide uppercase leading-tight">Store Link</span>
+              <span class="text-xs sm:text-sm font-medium text-textPrimary truncate group-hover:text-primary transition-colors duration-200">www.myybiz.cc/QXYmellon-Lens</span>
+            </span>
+            <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-textMuted group-hover:text-primary group-hover:translate-x-0.5 transition-all duration-200 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </a>
+          <p class="text-textSecondary text-xs sm:text-sm lg:text-base leading-relaxed">
+            Go to the QXYMellon online store using the link above. In the top-right corner of the page, you'll see <strong>"Login"</strong> and <strong>"Register"</strong> buttons. Click <strong>"Register"</strong> to start creating your account.
+          </p>
+        </div>
+      </div>
+      <div class="screenshot-wrapper">
+        <img src="img/mybiz_tutor1.png" alt="Step 1: QXYMellon store homepage showing Login and Register buttons in the top-right corner" loading="lazy">
+        <div class="highlight-badge badge-step1">Click here to Register</div>
+      </div>
+    </section>
+
+    <!-- Step 2 -->
+    <section class="step-card bg-surfaceCard rounded-xl sm:rounded-2xl shadow-sm border border-border p-4 xs:p-5 sm:p-8 mb-5 sm:mb-8 animate-in delay-2">
+      <div class="flex items-start gap-3 sm:gap-4 mb-4 sm:mb-6">
+        <div class="step-number w-10 h-10 xs:w-12 xs:h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl text-base sm:text-xl">2</div>
+        <div class="min-w-0 flex-1">
+          <h2 class="font-heading font-bold text-lg xs:text-xl sm:text-2xl text-textPrimary mb-1">Create Your Account</h2>
+          <p class="text-textSecondary text-xs sm:text-sm lg:text-base leading-relaxed">
+            Fill in the registration form with your <strong>Email Address</strong>, <strong>Password</strong>, and <strong>Confirm Password</strong>. Then click the blue <strong>"Create Account"</strong> button to complete registration.
+          </p>
+        </div>
+      </div>
+      <div class="screenshot-wrapper">
+        <img src="img/mybiz_tutor2.png" alt="Step 2: Registration form with Email Address, Password, and Confirm Password fields, and a Create Account button" loading="lazy">
+        <div class="highlight-badge badge-step2">Fill in your details & Create Account</div>
+      </div>
+    </section>
+
+    <!-- Step 3 -->
+    <section class="step-card bg-surfaceCard rounded-xl sm:rounded-2xl shadow-sm border border-border p-4 xs:p-5 sm:p-8 mb-5 sm:mb-8 animate-in delay-3">
+      <div class="flex items-start gap-3 sm:gap-4 mb-4 sm:mb-6">
+        <div class="step-number w-10 h-10 xs:w-12 xs:h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl text-base sm:text-xl">3</div>
+        <div class="min-w-0 flex-1">
+          <h2 class="font-heading font-bold text-lg xs:text-xl sm:text-2xl text-textPrimary mb-1">Apply to Become a Promoter</h2>
+          <p class="text-textSecondary text-xs sm:text-sm lg:text-base leading-relaxed">
+            After logging in, you'll see a new button appear near the top-left of the page: <strong>"Apply to Become a Promoter"</strong>. Click this button to begin your promoter application.
+          </p>
+        </div>
+      </div>
+      <div class="screenshot-wrapper">
+        <img src="img/mybiz_tutor3.png" alt="Step 3: Store page showing the 'Apply to Become a Promoter' button in the top navigation area" loading="lazy">
+        <div class="highlight-badge badge-step3">Click "Apply to Become a Promoter"</div>
+      </div>
+    </section>
+
+    <!-- Step 4 -->
+    <section class="step-card bg-surfaceCard rounded-xl sm:rounded-2xl shadow-sm border border-border p-4 xs:p-5 sm:p-8 mb-5 sm:mb-8 animate-in delay-4">
+      <div class="flex items-start gap-3 sm:gap-4 mb-4 sm:mb-6">
+        <div class="step-number w-10 h-10 xs:w-12 xs:h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl text-base sm:text-xl">4</div>
+        <div class="min-w-0 flex-1">
+          <h2 class="font-heading font-bold text-lg xs:text-xl sm:text-2xl text-textPrimary mb-1">Read Agreement & Confirm</h2>
+          <p class="text-textSecondary text-xs sm:text-sm lg:text-base leading-relaxed">
+            A dialog will appear with the Promoter Agreement. Read through the terms carefully, then check the box <strong>"You have read and agree to the agreement"</strong>. Finally, click the blue <strong>"Confirm Application"</strong> button.
+          </p>
+        </div>
+      </div>
+      <div class="screenshot-wrapper">
+        <img src="img/mybiz_tutor4.png" alt="Step 4: Promoter agreement dialog with checkbox to agree and Confirm Application button" loading="lazy">
+        <div class="highlight-badge badge-step4">Check the box & Confirm</div>
+      </div>
+    </section>
+
+    <!-- Success Message -->
+    <div class="bg-success/5 border border-success/20 rounded-xl sm:rounded-2xl p-5 sm:p-8 text-center animate-in delay-4">
+      <div class="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-success/10 mb-3 sm:mb-4">
+        <svg class="w-6 h-6 sm:w-7 sm:h-7 text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      </div>
+      <h3 class="font-heading font-bold text-lg sm:text-xl text-textPrimary mb-2">You're All Set!</h3>
+      <p class="text-textSecondary text-xs sm:text-sm lg:text-base max-w-lg mx-auto leading-relaxed">
+        Congratulations! Once approved, you'll be able to generate referral links, share products, and start earning commissions on every sale you bring in.
+      </p>
+    </div>
+  </main>
+
+  <!-- FAQ Section -->
+  <section class="max-w-4xl mx-auto px-3 xs:px-4 sm:px-6 lg:px-8 pb-8 sm:pb-12 lg:pb-20">
+    <h2 class="font-heading font-bold text-xl sm:text-2xl text-textPrimary text-center mb-6 sm:mb-8">Frequently Asked Questions</h2>
+    <div class="grid gap-3 sm:gap-4 sm:grid-cols-2">
+      <div class="bg-surfaceCard rounded-lg sm:rounded-xl border border-border p-4 sm:p-5">
+        <div class="flex items-start gap-2.5 sm:gap-3">
+          <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+            <svg class="w-3.5 h-3.5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+            </svg>
+          </div>
+          <div class="min-w-0">
+            <h4 class="font-heading font-semibold text-xs sm:text-sm text-textPrimary mb-1">Is it free to become a Promoter?</h4>
+            <p class="text-textMuted text-xs sm:text-sm leading-relaxed">Yes, applying and becoming a promoter is completely free. There are no fees involved.</p>
+          </div>
+        </div>
+      </div>
+      <div class="bg-surfaceCard rounded-lg sm:rounded-xl border border-border p-4 sm:p-5">
+        <div class="flex items-start gap-2.5 sm:gap-3">
+          <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+            <svg class="w-3.5 h-3.5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+            </svg>
+          </div>
+          <div class="min-w-0">
+            <h4 class="font-heading font-semibold text-xs sm:text-sm text-textPrimary mb-1">How long does approval take?</h4>
+            <p class="text-textMuted text-xs sm:text-sm leading-relaxed">Most applications are approved within 1-day after confirming the agreement.</p>
+          </div>
+        </div>
+      </div>
+      <div class="bg-surfaceCard rounded-lg sm:rounded-xl border border-border p-4 sm:p-5">
+        <div class="flex items-start gap-2.5 sm:gap-3">
+          <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+            <svg class="w-3.5 h-3.5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+            </svg>
+          </div>
+          <div class="min-w-0">
+            <h4 class="font-heading font-semibold text-xs sm:text-sm text-textPrimary mb-1">How do I earn commissions?</h4>
+            <p class="text-textMuted text-xs sm:text-sm leading-relaxed">Share your unique referral link. When someone makes a purchase through your link, you earn a commission, which is settled once per month.</p>
+          </div>
+        </div>
+      </div>
+      <div class="bg-surfaceCard rounded-lg sm:rounded-xl border border-border p-4 sm:p-5">
+        <div class="flex items-start gap-2.5 sm:gap-3">
+          <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+            <svg class="w-3.5 h-3.5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+            </svg>
+          </div>
+          <div class="min-w-0">
+            <h4 class="font-heading font-semibold text-xs sm:text-sm text-textPrimary mb-1">Can I apply from any device?</h4>
+            <p class="text-textMuted text-xs sm:text-sm leading-relaxed">Yes, you can register and apply from any device — desktop, tablet, or mobile phone.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Us Section -->
+  <section class="max-w-4xl mx-auto px-3 xs:px-4 sm:px-6 lg:px-8 pb-8 sm:pb-12 lg:pb-20">
+    <h2 class="font-heading font-bold text-xl sm:text-2xl text-textPrimary text-center mb-2">Contact Us</h2>
+    <p class="text-textMuted text-xs sm:text-sm text-center mb-6 sm:mb-8">Need help? Reach out to us through any of the channels below.</p>
+    <div class="grid gap-3 sm:gap-4 sm:grid-cols-3">
+
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/qxymellon_lens/" target="_blank" rel="noopener noreferrer"
+         class="group bg-surfaceCard rounded-lg sm:rounded-xl border border-border p-4 sm:p-5 flex flex-col items-center text-center cursor-pointer hover:border-primary/30 hover:shadow-md transition-all duration-200">
+        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-[#F58529] via-[#DD2A7B] to-[#8134AF] flex items-center justify-center mb-3 group-hover:shadow-lg group-hover:shadow-[#DD2A7B]/20 transition-shadow duration-200">
+          <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <circle cx="12" cy="12" r="5"/>
+            <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/>
+          </svg>
+        </div>
+        <h4 class="font-heading font-semibold text-xs sm:text-sm text-textPrimary mb-0.5">Instagram</h4>
+        <span class="text-textMuted text-[11px] sm:text-xs group-hover:text-primary transition-colors duration-200">@qxymellon_lens</span>
+      </a>
+
+      <!-- WeChat -->
+      <div class="group bg-surfaceCard rounded-lg sm:rounded-xl border border-border p-4 sm:p-5 flex flex-col items-center text-center">
+        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#07C160] flex items-center justify-center mb-3">
+          <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.006-.27-.013-.406-.032zm-2.53 3.274c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982z"/>
+          </svg>
+        </div>
+        <h4 class="font-heading font-semibold text-xs sm:text-sm text-textPrimary mb-0.5">WeChat</h4>
+        <span class="text-textMuted text-[11px] sm:text-xs select-all">YXG_0323</span>
+      </div>
+
+      <!-- Email -->
+      <a href="mailto:official@qxymellon.com"
+         class="group bg-surfaceCard rounded-lg sm:rounded-xl border border-border p-4 sm:p-5 flex flex-col items-center text-center cursor-pointer hover:border-primary/30 hover:shadow-md transition-all duration-200">
+        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-primary flex items-center justify-center mb-3 group-hover:shadow-lg group-hover:shadow-primary/20 transition-shadow duration-200">
+          <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+          </svg>
+        </div>
+        <h4 class="font-heading font-semibold text-xs sm:text-sm text-textPrimary mb-0.5">Email</h4>
+        <span class="text-textMuted text-[11px] sm:text-xs group-hover:text-primary transition-colors duration-200">official@qxymellon.com</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-surfaceCard border-t border-border py-6 sm:py-8">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-textMuted text-xs sm:text-sm">&copy; 2025 QXYMellon. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scroll animation observer -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.animate-in').forEach(el => {
+      el.style.animationPlayState = 'paused';
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
