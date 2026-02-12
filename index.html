@@ -204,6 +204,42 @@
       .badge-step4 { bottom: 13%; right: 32%; }
     }
 
+    /* Step 5: "Click profile icon" — points to top-right user icon */
+    .badge-step5 {
+      top: 10%;
+      right: 2%;
+    }
+    @media (min-width: 400px) {
+      .badge-step5 { top: 12%; right: 2%; }
+    }
+    @media (min-width: 640px) {
+      .badge-step5 { top: 14%; right: 2%; }
+    }
+
+    /* Step 6: "Click Affiliate → Wallet" — points to dropdown menu area */
+    .badge-step6 {
+      top: 28%;
+      right: 8%;
+    }
+    @media (min-width: 400px) {
+      .badge-step6 { top: 30%; right: 10%; }
+    }
+    @media (min-width: 640px) {
+      .badge-step6 { top: 34%; right: 12%; }
+    }
+
+    /* Step 7: "Click Apply Withdrawal" — points to right-side button */
+    .badge-step7 {
+      top: 14%;
+      right: 2%;
+    }
+    @media (min-width: 400px) {
+      .badge-step7 { top: 16%; right: 2%; }
+    }
+    @media (min-width: 640px) {
+      .badge-step7 { top: 14%; right: 2%; }
+    }
+
     /* Connector chevrons in overview pills — hide on tiny screens */
     .pill-chevron {
       display: none;
@@ -403,6 +439,121 @@
       </p>
     </div>
   </main>
+
+  <!-- Withdrawal Tutorial Section -->
+  <section class="max-w-4xl mx-auto px-3 xs:px-4 sm:px-6 lg:px-8 pb-8 sm:pb-12 lg:pb-20">
+    <!-- Section Header -->
+    <div class="text-center mb-8 sm:mb-12">
+      <div class="inline-flex items-center gap-2 bg-amber-50 border border-amber-200 rounded-full px-4 sm:px-5 py-1.5 sm:py-2 mb-4 sm:mb-6">
+        <svg class="w-4 h-4 sm:w-5 sm:h-5 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
+        </svg>
+        <span class="text-amber-700 font-heading font-medium text-xs sm:text-sm">Withdrawal Guide</span>
+      </div>
+      <h2 class="font-heading font-extrabold text-2xl xs:text-3xl sm:text-4xl text-textPrimary leading-tight mb-3 sm:mb-4">
+        How to Withdraw Commissions
+      </h2>
+      <p class="text-textSecondary text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+        Once you've earned commissions, follow these 3 simple steps to apply for a withdrawal.
+      </p>
+    </div>
+
+    <!-- Withdrawal Overview Pills -->
+    <div class="flex flex-wrap justify-center gap-2 xs:gap-3 mb-8 sm:mb-14 animate-in delay-1">
+      <div class="flex items-center gap-2 bg-white rounded-full px-3 xs:px-4 py-1.5 xs:py-2 shadow-sm border border-border">
+        <div class="w-6 h-6 xs:w-7 xs:h-7 rounded-lg bg-amber-500/10 flex items-center justify-center">
+          <span class="text-amber-600 font-heading font-bold text-xs">1</span>
+        </div>
+        <span class="text-textSecondary text-xs xs:text-sm font-medium">Profile</span>
+      </div>
+      <div class="pill-chevron items-center gap-1 text-textMuted">
+        <svg class="w-3.5 h-3.5 xs:w-4 xs:h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+        </svg>
+      </div>
+      <div class="flex items-center gap-2 bg-white rounded-full px-3 xs:px-4 py-1.5 xs:py-2 shadow-sm border border-border">
+        <div class="w-6 h-6 xs:w-7 xs:h-7 rounded-lg bg-amber-500/10 flex items-center justify-center">
+          <span class="text-amber-600 font-heading font-bold text-xs">2</span>
+        </div>
+        <span class="text-textSecondary text-xs xs:text-sm font-medium">Wallet</span>
+      </div>
+      <div class="pill-chevron items-center gap-1 text-textMuted">
+        <svg class="w-3.5 h-3.5 xs:w-4 xs:h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+        </svg>
+      </div>
+      <div class="flex items-center gap-2 bg-white rounded-full px-3 xs:px-4 py-1.5 xs:py-2 shadow-sm border border-border">
+        <div class="w-6 h-6 xs:w-7 xs:h-7 rounded-lg bg-amber-500/10 flex items-center justify-center">
+          <span class="text-amber-600 font-heading font-bold text-xs">3</span>
+        </div>
+        <span class="text-textSecondary text-xs xs:text-sm font-medium">Withdraw</span>
+      </div>
+    </div>
+
+    <!-- Step 5 -->
+    <div class="step-card bg-surfaceCard rounded-xl sm:rounded-2xl shadow-sm border border-border p-4 xs:p-5 sm:p-8 mb-5 sm:mb-8 animate-in delay-1">
+      <div class="flex items-start gap-3 sm:gap-4 mb-4 sm:mb-6">
+        <div class="step-number w-10 h-10 xs:w-12 xs:h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl text-base sm:text-xl" style="background: linear-gradient(135deg, #D97706, #F59E0B);">1</div>
+        <div class="min-w-0 flex-1">
+          <h2 class="font-heading font-bold text-lg xs:text-xl sm:text-2xl text-textPrimary mb-1">Click Your Profile Icon</h2>
+          <p class="text-textSecondary text-xs sm:text-sm lg:text-base leading-relaxed">
+            After logging in, click the <strong>profile/user icon</strong> in the top-right corner of the page to open your account menu.
+          </p>
+        </div>
+      </div>
+      <div class="screenshot-wrapper">
+        <img src="img/mybiz_tutor5.png" alt="Step 5: Store page with the profile/user icon highlighted in the top-right corner" loading="lazy">
+        <div class="highlight-badge badge-step5">Click the profile icon</div>
+      </div>
+    </div>
+
+    <!-- Step 6 -->
+    <div class="step-card bg-surfaceCard rounded-xl sm:rounded-2xl shadow-sm border border-border p-4 xs:p-5 sm:p-8 mb-5 sm:mb-8 animate-in delay-2">
+      <div class="flex items-start gap-3 sm:gap-4 mb-4 sm:mb-6">
+        <div class="step-number w-10 h-10 xs:w-12 xs:h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl text-base sm:text-xl" style="background: linear-gradient(135deg, #D97706, #F59E0B);">2</div>
+        <div class="min-w-0 flex-1">
+          <h2 class="font-heading font-bold text-lg xs:text-xl sm:text-2xl text-textPrimary mb-1">Go to Affiliate &rarr; Wallet</h2>
+          <p class="text-textSecondary text-xs sm:text-sm lg:text-base leading-relaxed">
+            In the dropdown menu, click <strong>"Affiliate"</strong> to expand the submenu, then select <strong>"Wallet"</strong> to view your commission balance.
+          </p>
+        </div>
+      </div>
+      <div class="screenshot-wrapper">
+        <img src="img/mybiz_tutor6.png" alt="Step 6: Account dropdown menu showing Affiliate section expanded with Wallet option highlighted" loading="lazy">
+        <div class="highlight-badge badge-step6">Click Affiliate &rarr; Wallet</div>
+      </div>
+    </div>
+
+    <!-- Step 7 -->
+    <div class="step-card bg-surfaceCard rounded-xl sm:rounded-2xl shadow-sm border border-border p-4 xs:p-5 sm:p-8 mb-5 sm:mb-8 animate-in delay-3">
+      <div class="flex items-start gap-3 sm:gap-4 mb-4 sm:mb-6">
+        <div class="step-number w-10 h-10 xs:w-12 xs:h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl text-base sm:text-xl" style="background: linear-gradient(135deg, #D97706, #F59E0B);">3</div>
+        <div class="min-w-0 flex-1">
+          <h2 class="font-heading font-bold text-lg xs:text-xl sm:text-2xl text-textPrimary mb-1">Apply for Withdrawal</h2>
+          <p class="text-textSecondary text-xs sm:text-sm lg:text-base leading-relaxed">
+            On the Wallet page, you'll see your <strong>Commission Balance</strong> and <strong>Pending Commission</strong>. Click the yellow <strong>"Apply Withdrawal"</strong> button on the right to submit your withdrawal request.
+          </p>
+        </div>
+      </div>
+      <div class="screenshot-wrapper">
+        <img src="img/mybiz_tutor7.png" alt="Step 7: My Wallet page showing Commission Balance, Pending Commission, and Apply Withdrawal button" loading="lazy">
+        <div class="highlight-badge badge-step7">Click "Apply Withdrawal"</div>
+      </div>
+    </div>
+
+    <!-- Withdrawal Success Note -->
+    <div class="bg-amber-50 border border-amber-200 rounded-xl sm:rounded-2xl p-5 sm:p-8 text-center animate-in delay-4">
+      <div class="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-amber-100 mb-3 sm:mb-4">
+        <svg class="w-6 h-6 sm:w-7 sm:h-7 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      </div>
+      <h3 class="font-heading font-bold text-lg sm:text-xl text-textPrimary mb-2">Withdrawal Submitted!</h3>
+      <p class="text-textSecondary text-xs sm:text-sm lg:text-base max-w-lg mx-auto leading-relaxed">
+        Your withdrawal request will be reviewed and processed. You can check the status anytime under <strong>Withdrawal History</strong> on the Wallet page.
+      </p>
+    </div>
+  </section>
 
   <!-- FAQ Section -->
   <section class="max-w-4xl mx-auto px-3 xs:px-4 sm:px-6 lg:px-8 pb-8 sm:pb-12 lg:pb-20">
